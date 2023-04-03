@@ -1,0 +1,124 @@
+type Images {
+    imageSrc: String
+    created_at: DateTime
+    name: String!
+}
+
+type Guests {
+    id: ID!
+    created_at: DateTime
+    wedding: String
+    party: String
+    meal: String
+    name: String
+}
+
+type Admin {
+    id: ID!
+    created_at: DateTime
+    username: String
+    password: String
+}
+
+"""
+The following queries are just a set of examples of how to access your schema.
+Feel free to modify them or aggregate more.
+"""
+type Query {
+    " Queries for type 'Images' "
+    getImagesById(name: String!): [Images]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "images"
+            configuration: "postgresql_config"
+        )
+    getImagesByIdAndImageSrc(name: String!, imageSrc: String!): [Images]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "images"
+            configuration: "postgresql_config"
+        )
+    getImagesList: [Images]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "images"
+            configuration: "postgresql_config"
+        )
+    getImagesPaginatedList(first: Int, after: Int): [Images]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            query: """
+            SELECT "created_at", "name", "imageSrc" FROM "images" LIMIT $1 OFFSET $2
+            """
+            configuration: "postgresql_config"
+        )
+    # GUESTS
+    getGuestsList: [Guests]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "guests"
+            configuration: "postgresql_config"
+        )
+    getGuestByName(name: String): [Guests]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "guests"
+            configuration: "postgresql_config"
+        )
+    # Admin
+    getAdminByUsernameAndPassword(username: String, password: String): [Admin]
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "admin"
+            configuration: "postgresql_config"
+        )
+
+    # getGuestByName(name: String): [Guests]
+    #   @dbquery(
+    #         type: "postgresql"
+    #         schema: "public"
+    #         query: """
+    #         select * from "public"."guests" where to_tsvector(name) @@ to_tsquery($1);
+    #         """
+    #         configuration: "postgresql_config"
+    #     )
+}
+
+"""
+The following mutations are just a set of examples of how to access your schema.
+Feel free to modify them or aggregate more.
+"""
+type Mutation {
+    " Mutations for type 'Images' "
+    deleteImages(name: String!): Images
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "images"
+            dml: DELETE
+            configuration: "postgresql_config"
+        )
+    insertImages(imageSrc: String!, name: String!): Images
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "images"
+            dml: INSERT
+            configuration: "postgresql_config"
+        )
+    insertGuest(name: String!): Guests
+        @dbquery(
+            type: "postgresql"
+            schema: "public"
+            table: "guests"
+            dml: INSERT
+            configuration: "postgresql_config"
+        )
+}
