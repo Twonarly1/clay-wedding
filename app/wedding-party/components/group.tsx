@@ -7,15 +7,21 @@ type Props = {
         role: string
     }[]
     row: boolean
+    title?: string
 }
 
-function Group({ persons, row }: Props) {
+function Group({ persons, row, title }: Props) {
     return (
         <div
             className={clsx(
-                `${row ? "grid grid-cols-2 border-b border-fern_green" : "flex flex-col"}`,
+                `${
+                    row
+                        ? "grid grid-cols-1 border-b border-fern_green sm:grid-cols-2"
+                        : "flex flex-col"
+                }`,
             )}
         >
+            <p className="mx-auto text-3xl">{title}</p>
             {persons.map((person: { name: string; role: string }) => (
                 <div
                     key={person.name}
@@ -29,10 +35,10 @@ function Group({ persons, row }: Props) {
                         width={200}
                         className="rounded-full bg-fern_green bg-opacity-50 p-1 shadow"
                     />
-                    <p className="text-center text-xl">
-                        <span className="font-semibold text-fern_green">{person.name}</span> -{" "}
-                        {person.role}
-                    </p>
+                    <div className="h-10 text-center sm:text-xl">
+                        <p className="font-semibold text-fern_green">{person.name}</p>
+                        <p>{person.role}</p>
+                    </div>
                 </div>
             ))}
         </div>

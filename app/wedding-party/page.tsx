@@ -34,11 +34,11 @@ function page() {
     return (
         <>
             <PageTitle title={"Wedding Party"} />
-            <div className="mx-auto max-w-3xl p-10">
+            <div className="mx-auto max-w-3xl p-2 sm:p-10">
                 <Group persons={couple} row={true} />
-                <div className="divide- mt-10 grid grid-cols-2 divide-x divide-fern_green">
-                    <Group persons={dejahsParty} row={false} />
-                    <Group persons={marcusParty} row={false} />
+                <div className="divide- mt-10 grid grid-cols-1 divide-x divide-fern_green sm:grid-cols-2">
+                    <Group persons={dejahsParty} row={false} title="Bride Party" />
+                    <Group persons={marcusParty} row={false} title="Groom Party" />
                 </div>
             </div>
         </>

@@ -112,7 +112,7 @@ function NameForm() {
     return (
         <>
             {guestData?.getGuestByName[0] ? (
-                <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-10">
+                <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-5 sm:p-10">
                     <div className="flex flex-col space-y-2">
                         <h1 className="text-3xl font-bold">{guestData?.getGuestByName[0].name}</h1>
                         <p className="mb-6">

@@ -80,7 +80,7 @@ export function GuestList() {
     }
 
     return (
-        <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-10">
+        <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-5 sm:p-10">
             {adminPriveleges ? (
                 <>
                     <div className="justify-between space-y-4 text-center sm:flex sm:space-y-0">

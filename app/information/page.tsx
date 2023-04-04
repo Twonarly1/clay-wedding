@@ -15,7 +15,7 @@ export default function Page() {
             <PageTitle title={"Information"} />
             <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-5 sm:p-10">
                 <Tab.Group>
-                    <Tab.List className="flex space-x-1 rounded-xl bg-fern_green p-1">
+                    <Tab.List className="flex flex-col rounded-xl bg-fern_green p-1 sm:flex-row sm:space-x-1">
                         {infoPages.map((category) => (
                             <Tab
                                 key={category}

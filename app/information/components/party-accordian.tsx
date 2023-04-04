@@ -5,11 +5,11 @@ import { Chevron } from "../../../core/icons"
 
 export function PartyAccordian() {
     return (
-        <div className="mx-auto flex max-w-5xl flex-col p-10">
+        <div className="mx-auto flex max-w-5xl flex-col p-2 sm:p-10">
             <div className="mb-6">
                 <p className="text-4xl sm:text-5xl">Wedding Day</p>
-                <p className="mt-4 text-3xl text-fern_green">
-                    Ojikita Regional Park -<span className="text-3xl">10/07/2023</span>
+                <p className="mt-2 text-fern_green sm:mt-4 sm:text-3xl">
+                    Ojikita Regional Park -<span className="sm:text-3xl">10/07/2023</span>
                 </p>
             </div>
             <Disclosure>
