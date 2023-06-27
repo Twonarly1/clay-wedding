@@ -8,6 +8,7 @@ import toast from "react-hot-toast"
 import { Button } from "../../../core"
 import { createClient } from "../../../lib/supabase/supabase-browser"
 import { useRouter } from "next/navigation"
+import { ArrowPathIcon } from "@heroicons/react/24/outline"
 
 const CDNURL = "https://oaxxgydogfcpdaxxxwbd.supabase.co/storage/v1/object/public/images/"
 
@@ -65,6 +66,11 @@ function Upload() {
 
     return (
         <>
+            <div className="absolute right-2 top-2">
+                <Button onClick={() => router.refresh()} variant="white">
+                    <ArrowPathIcon className="h-6 w-6" />
+                </Button>
+            </div>
             <div className="mx-auto my-6 flex items-center justify-center">
                 <Button onClick={handleClick} variant="dark">
                     + Upload Images

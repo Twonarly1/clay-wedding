@@ -5,6 +5,7 @@ type Person = {
 }
 
 type FAQ = {
+    icon?: Icon
     question: string
     answer: string
 }

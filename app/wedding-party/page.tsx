@@ -1,6 +1,7 @@
 import { PageTitle } from "../../core"
 import Image from "next/image"
 import GridList from "./components/grid-list"
+import { Slideshow } from "../../core/slideshow"
 
 // const couple: Person[] = [
 //     { name: "Dejah Hawkinson", role: "Bride", imageUrl: "/party/couple.jpeg" },
@@ -29,14 +30,17 @@ function page() {
     return (
         <div className="min-h-screen">
             <PageTitle title={"Wedding Party"} />
-            <div className="flex flex-col space-y-8 p-8 py-24">
-                <Image
+            <div className="flex flex-col space-y-8 p-8 py-12">
+                {/* <Image
                     height={400}
                     width={400}
                     alt=""
                     className="mx-auto h-80 w-auto rounded-lg object-cover"
                     src="/party/couple.jpeg"
-                />
+                /> */}
+                <div className="">
+                    <Slideshow />
+                </div>
                 <h2 className="cursor-default text-center text-xl font-bold">Dejah's Party</h2>
                 <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-white scrollbar-thumb-fern_green">
                     <GridList people={dejahsParty} />

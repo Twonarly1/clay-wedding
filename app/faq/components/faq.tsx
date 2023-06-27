@@ -47,7 +47,7 @@ const faqs: FAQ[] = [
 
 export default function FAQ() {
     return (
-        <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
+        <dl className="space-y-6 divide-y divide-fern_green">
             {faqs.map((faq) => (
                 <Disclosure as="div" key={faq.question} className="pt-6">
                     {({ open }) => (
@@ -60,11 +60,14 @@ export default function FAQ() {
                                     <span className="ml-6 flex h-7 items-center">
                                         {open ? (
                                             <MinusSmallIcon
-                                                className="h-6 w-6"
+                                                className="h-6 w-6 text-fern_green"
                                                 aria-hidden="true"
                                             />
                                         ) : (
-                                            <PlusSmallIcon className="h-6 w-6" aria-hidden="true" />
+                                            <PlusSmallIcon
+                                                className="h-6 w-6 text-fern_green"
+                                                aria-hidden="true"
+                                            />
                                         )}
                                     </span>
                                 </Disclosure.Button>

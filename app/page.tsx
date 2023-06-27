@@ -2,6 +2,7 @@ import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { Dancing_Script } from "next/font/google"
 import { Button } from "../core"
+import { Slideshow } from "../core/slideshow"
 
 const dancing = Dancing_Script({
     subsets: ["latin"],
@@ -31,11 +32,12 @@ function HomePage() {
     const minutesLeft = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
 
     return (
-        <div className="relative flex h-screen flex-col items-center justify-center bg-fern_green/10 text-center">
+        <div className="relative flex min-h-screen flex-col items-center justify-center bg-fern_green/10 text-center">
             <div className="absolute right-5 top-5 flex cursor-default items-center gap-2 text-sm font-light sm:text-xl">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-fern_green" />
                 <p> {`${daysLeft} days, ${hoursLeft} hours, ${minutesLeft} minutes `}</p>
             </div>
+
             <p
                 className={clsx(
                     `${flavor}`,
@@ -59,7 +61,7 @@ function HomePage() {
                         <p>Ojiketa Regional Park</p>
                     </div>
                 </Button>
-                <nav className="flex flex-col space-y-3 pt-10">
+                <nav className="flex flex-col gap-3 py-10">
                     {navItems.map((i) => (
                         <Button as="a" key={i.href} href={i.href} variant="dark">
                             {i.title}

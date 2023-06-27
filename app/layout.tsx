@@ -1,18 +1,9 @@
 import "./globals.css"
 
-import localFont from "@next/font/local"
-import clsx from "clsx"
 import { Footer } from "../core"
 import Providers from "./providers"
 
 import type { Metadata } from "next"
-
-const kaisei = localFont({
-    src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
-    weight: "700",
-    variable: "--font-kaisei",
-    display: "swap",
-})
 
 export const metadata: Metadata = {
     title: "Clay Wedding",
@@ -30,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={(clsx(kaisei.variable), "bg-fern_green/10")}>
+        <html lang="en" className="antialiases bg-fern_green/10 text-zinc-900">
             <body className="">
                 <Providers>{children}</Providers>
                 <Footer />
