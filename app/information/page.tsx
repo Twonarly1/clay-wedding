@@ -3,7 +3,7 @@ import { PageTitle } from "../../core"
 const faqs: FAQ[] = [
     {
         question: "Wedding Day Information",
-        answer: "4:00pm - 4:30pm Chapel",
+        answer: "4:00pm - Midnight",
     },
     {
         question: "Ceremony",
@@ -23,17 +23,17 @@ export default function Page() {
     return (
         <div className="min-h-screen">
             <PageTitle title={"Information"} />
-            <div className="mx-auto flex max-w-7xl flex-col justify-center gap-16 px-6 py-24 lg:flex-row lg:px-8">
+            <div className="mx-auto flex max-w-7xl flex-col-reverse justify-center gap-16 p-8 py-24 lg:flex-row">
                 <div className="w-full">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1557.5317475353731!2d-92.88629398972286!3d45.34624407342416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHotels!5e0!3m2!1sen!2sus!4v1687614705976!5m2!1sen!2sus"
-                        width="450"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7214.9466450291675!2d-92.887922!3d45.344981!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b2ec061c8fc4c5%3A0x3d523ef29526472e!2sStrom%20Hall!5e1!3m2!1sen!2sus!4v1687868391859!5m2!1sen!2sus"
+                        width="600"
                         height="450"
                         className="h-full min-h-[450px] w-full"
                         loading="eager"
                     ></iframe>
                 </div>
-                <div className="mt-10 cursor-default lg:mt-0">
+                <div className="cursor-default text-center lg:text-left">
                     <dl className="space-y-10">
                         <div className="">
                             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">

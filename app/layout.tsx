@@ -2,10 +2,10 @@ import "./globals.css"
 
 import localFont from "@next/font/local"
 import clsx from "clsx"
-
-import type { Metadata } from "next"
 import { Footer } from "../core"
 import Providers from "./providers"
+
+import type { Metadata } from "next"
 
 const kaisei = localFont({
     src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" className={(clsx(kaisei.variable), "bg-white")}>
-            <body>
+        <html lang="en" className={(clsx(kaisei.variable), "bg-fern_green/10")}>
+            <body className="">
                 <Providers>{children}</Providers>
                 <Footer />
             </body>

@@ -36,7 +36,7 @@ export default function RealtimeImages({ serverImages }: { serverImages: Image[]
     }
 
     return (
-        <div className=" p-8">
+        <div className="p-8">
             <ResponsiveMasonry
                 columnsCountBreakPoints={{
                     320: 1,

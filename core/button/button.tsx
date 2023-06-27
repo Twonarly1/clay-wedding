@@ -7,7 +7,7 @@ type IntrinsicAnchorProps = ComponentProps<"a">
 type IntrinsicButtonProps = ComponentProps<"button">
 
 type CommonProps = {
-    variant?: "default" | "dark" | "white" | "admin"
+    variant?: "default" | "dark" | "white"
 } & ButtonContentProps
 
 type AnchorProps = {
@@ -42,14 +42,13 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(f
         props.as = "button"
     }
 
-    const className = clsx("transition-colors", {
+    const className = clsx("transition-colors text-center flex items-center justify-center", {
         "flex cursor-pointer items-center space-x-2 text-xl font-light sm:text-2xl":
             variant === "default",
-        "rounded-full border bg-fern_green p-3 px-8 text-white hover:border-fern_green hover:bg-white hover:text-fern_green":
+        "rounded-full border border-transparent bg-fern_green p-3 px-8 text-center text-white hover:border-fern_green hover:bg-white hover:text-fern_green":
             variant === "dark",
         "rounded-full border border-fern_green bg-white p-3 px-8 text-fern_green hover:border-fern_green hover:bg-fern_green hover:text-white":
             variant === "white",
-        "text-fern_green hover:underline": variant === "admin",
     })
 
     if (isAnchor(props)) {

@@ -29,7 +29,7 @@ function page() {
     return (
         <div className="min-h-screen">
             <PageTitle title={"Wedding Party"} />
-            <div className="flex flex-col space-y-8 p-8">
+            <div className="flex flex-col space-y-8 p-8 py-24">
                 <Image
                     height={400}
                     width={400}
@@ -38,11 +38,11 @@ function page() {
                     src="/party/couple.jpeg"
                 />
                 <h2 className="cursor-default text-center text-xl font-bold">Dejah's Party</h2>
-                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
+                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-white scrollbar-thumb-fern_green">
                     <GridList people={dejahsParty} />
                 </div>
                 <h2 className="cursor-default text-center text-xl font-bold">Marcus's Party</h2>
-                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
+                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-white scrollbar-thumb-fern_green">
                     <GridList people={marcusParty} />
                 </div>
             </div>

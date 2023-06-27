@@ -1,6 +1,6 @@
 import clsx from "clsx"
 import { Dancing_Script } from "next/font/google"
-import { CustomLink } from "./custom-link"
+import { Button } from "./button"
 
 const dancing = Dancing_Script({
     subsets: ["latin"],
@@ -11,9 +11,11 @@ const flavor = `${dancing.className}`
 
 export function PageTitle({ title }: { title: string }) {
     return (
-        <div className="relative mx-auto flex w-full flex-col items-center justify-center border-b">
-            <div className="absolute left-2 top-4">
-                <CustomLink href="/" title="Home" />
+        <div className="relative mx-auto flex w-full flex-col items-center justify-center border-b border-fern_green bg-white">
+            <div className="absolute left-2 top-2">
+                <Button as="a" href="/" variant="dark">
+                    Home
+                </Button>
             </div>
             <h1
                 className={clsx(

@@ -31,14 +31,14 @@ function page() {
     return (
         <div className="min-h-screen">
             <PageTitle title={"Accommodations"} />
-            <div className="mx-auto grid w-full max-w-7xl gap-8 p-8 sm:grid-cols-2">
+            <div className="mx-auto grid w-full max-w-7xl gap-16 p-8 py-24 lg:grid-cols-2">
                 {hotels.map((hotel) => (
                     <div
-                        className="relative flex flex-col space-y-5 rounded border p-8 shadow-lg hover:shadow-fern_green"
+                        className="relative flex flex-col space-y-5 rounded-lg border-2 border-fern_green bg-white p-8 shadow-lg"
                         key={hotel.href}
                     >
-                        <b className="text-2xl">{hotel.name}</b>
-                        <div className="flex gap-4">
+                        <b className="h-24 text-2xl">{hotel.name}</b>
+                        <div className="absolute bottom-4 left-8 flex gap-4">
                             <p className="rounded-full bg-green-500/30 px-3 py-1">
                                 {hotel.distance}
                             </p>
@@ -46,7 +46,7 @@ function page() {
                         </div>
                         <div>
                             <a
-                                className="absolute bottom-4 right-4 rounded-full border border-fern_green bg-white px-3 py-1 text-fern_green hover:border-fern_green hover:bg-fern_green hover:text-white"
+                                className="absolute bottom-4 right-8 rounded-full border border-fern_green bg-white px-3 py-1 text-fern_green hover:border-fern_green hover:bg-fern_green hover:text-white"
                                 href={hotel.href}
                                 target="_blank"
                                 rel="noopener noreferrer"

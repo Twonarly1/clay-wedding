@@ -1,7 +1,7 @@
 import { CalendarIcon, MapPinIcon } from "@heroicons/react/24/outline"
 import clsx from "clsx"
 import { Dancing_Script } from "next/font/google"
-import { Button, CustomLink } from "../core"
+import { Button } from "../core"
 
 const dancing = Dancing_Script({
     subsets: ["latin"],
@@ -16,6 +16,10 @@ const navItems: NavItem[] = [
     { title: "FAQ", href: "/faq" },
     { title: "Accommodations", href: "/accommodations" },
     { title: "Gallery", href: "/gallery" },
+    {
+        title: "Registry",
+        href: "https://www.amazon.com/wedding/dejah-hawkinson-marcus-clay-chisago-city-october-2023/registry/34CLJCXZYBXOZ",
+    },
 ]
 
 function HomePage() {
@@ -27,7 +31,7 @@ function HomePage() {
     const minutesLeft = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60))
 
     return (
-        <div className="relative flex h-screen flex-col items-center justify-center p-1 text-center">
+        <div className="relative flex h-screen flex-col items-center justify-center bg-fern_green/10 text-center">
             <div className="absolute right-5 top-5 flex cursor-default items-center gap-2 text-sm font-light sm:text-xl">
                 <div className="h-2 w-2 animate-pulse rounded-full bg-fern_green" />
                 <p> {`${daysLeft} days, ${hoursLeft} hours, ${minutesLeft} minutes `}</p>
@@ -35,14 +39,14 @@ function HomePage() {
             <p
                 className={clsx(
                     `${flavor}`,
-                    "cursor-default text-center text-[50px] text-fern_green sm:text-[100px]",
+                    "cursor-default text-center text-[60px] font-bold text-fern_green sm:text-[100px]",
                 )}
             >
                 Dejah & Marcus
             </p>
-            <div className="flex flex-col items-center justify-center gap-2">
-                <div className="flex cursor-default items-center space-x-2 text-xl font-light sm:text-2xl">
-                    <CalendarIcon className="h-5 w-5 opacity-70 sm:h-7 sm:w-7" />
+            <div className="flex flex-col items-center gap-2 pt-4">
+                <div className="group flex cursor-default items-center space-x-2 text-xl font-light sm:text-2xl">
+                    <CalendarIcon className="h-5 w-5 opacity-70 group-hover:text-fern_green sm:h-7 sm:w-7" />
                     <p>October 7th, 2023</p>
                 </div>
 
@@ -55,18 +59,12 @@ function HomePage() {
                         <p>Ojiketa Regional Park</p>
                     </div>
                 </Button>
-                <nav className="mt-10 flex flex-col space-y-3">
+                <nav className="flex flex-col space-y-3 pt-10">
                     {navItems.map((i) => (
-                        <CustomLink key={i.href} href={i.href} title={i.title} />
+                        <Button as="a" key={i.href} href={i.href} variant="dark">
+                            {i.title}
+                        </Button>
                     ))}
-                    <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href="https://www.amazon.com/wedding/dejah-hawkinson-marcus-clay-chisago-city-october-2023/registry/34CLJCXZYBXOZ"
-                        className="flex items-center justify-center rounded-full border bg-fern_green p-3 px-8 text-white hover:border-fern_green hover:bg-white hover:text-fern_green"
-                    >
-                        Registry
-                    </a>
                 </nav>
             </div>
         </div>
