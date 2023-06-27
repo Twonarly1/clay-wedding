@@ -39,7 +39,7 @@ function HomePage() {
             <p
                 className={clsx(
                     `${flavor}`,
-                    "cursor-default text-center text-[60px] font-bold text-fern_green sm:text-[100px]",
+                    "cursor-default text-center text-[50px] font-bold text-fern_green sm:text-[100px]",
                 )}
             >
                 Dejah & Marcus
