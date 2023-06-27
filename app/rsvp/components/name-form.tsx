@@ -112,7 +112,7 @@ function NameForm() {
     return (
         <>
             {guestData?.getGuestByName[0] ? (
-                <div className="mx-auto flex max-w-5xl flex-col space-y-4 p-5 sm:p-10">
+                <div className="mx-auto flex h-screen max-w-5xl flex-col space-y-4 p-5 sm:p-10">
                     <div className="flex flex-col space-y-2">
                         <h1 className="text-3xl font-bold">{guestData?.getGuestByName[0].name}</h1>
                         <p className="mb-6">
@@ -123,7 +123,7 @@ function NameForm() {
                     <RadioGroup
                         value={isAttendingWedding}
                         onChange={setIsAttendingWedding}
-                        className="space-y-4"
+                        className="space-y-4 pt-5"
                     >
                         <RadioGroup.Label className="text-2xl">Is attending?</RadioGroup.Label>
                         <div className="flex items-center space-x-4">
@@ -195,7 +195,7 @@ function NameForm() {
                             </div>
                         </RadioGroup>
                     )}
-                    <div className="flex justify-end space-x-4">
+                    <div className="flex justify-center space-x-4 pt-5 sm:justify-end">
                         <CustomLink href="/" variant="white" title="Cancel" />
                         <Button variant="dark" type="submit" onClick={updateGuestRecord}>
                             {guestData.getGuestByName[0].wedding ? "Update" : "Submit"}

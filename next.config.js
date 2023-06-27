@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  images: {
-    domains: ["oaxxgydogfcpdaxxxwbd.supabase.co"],
-  },
-};
+    experimental: {
+        typedRoutes: true,
+        serverActions: true,
+    },
+    images: {
+        domains: ["oaxxgydogfcpdaxxxwbd.supabase.co"],
+    },
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

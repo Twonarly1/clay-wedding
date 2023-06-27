@@ -8,9 +8,9 @@ type SupabaseStorageImage = {
 }
 
 type SupabaseDatabaseImage = {
-    created_at: string
-    imageSrc: string
-    name: string
+    created_at: string | null
+    imageSrc: string | null
+    name: string | null
 }
 
 type Guest = {

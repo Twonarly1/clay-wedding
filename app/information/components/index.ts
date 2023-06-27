@@ -1,2 +1,1 @@
-export { PartyAccordian } from "./party-accordian"
-export { WeddingAccordian } from "./wedding-accordian"
+export { MapComponent } from "./map"

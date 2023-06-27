@@ -13,7 +13,7 @@ const flavor = `${dancing.className}`
 
 export function PageTitle({ title }: { title: string }) {
     return (
-        <div className="ring-b relative mx-auto flex w-full flex-col items-center justify-center ring-1 ring-black">
+        <div className="relative mx-auto flex w-full flex-col items-center justify-center border-b">
             <div className="absolute left-2 top-4">
                 <CustomLink href="/" title="Home" />
             </div>
