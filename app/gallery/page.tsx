@@ -1,12 +1,7 @@
-import { PageTitle } from "../../core/components"
+import { PageTitle } from "../../core"
 import Upload from "./components/upload"
 import { createClient } from "../../lib/supabase/supabase-server"
 import RealtimeImages from "./components/realtime-images"
-
-// export async function delay(ms: number) {
-//     await new Promise((resolve) => setTimeout(resolve, ms))
-// }
-// await delay(5000)
 
 export default async function Index() {
     const supabase = createClient()
@@ -14,10 +9,10 @@ export default async function Index() {
     const { data: images, error } = await supabase.from("gallery").select("*")
 
     return (
-        <>
+        <div className="min-h-screen">
             <PageTitle title={"Gallery"} />
             <Upload />
             <RealtimeImages serverImages={images ?? []} />
-        </>
+        </div>
     )
 }

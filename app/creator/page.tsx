@@ -1,10 +1,10 @@
-import { PageTitle } from "../../core/components"
+import { PageTitle } from "../../core"
 
 function page() {
     return (
-        <>
+        <div className="min-h-screen">
             <PageTitle title={"Developer"} />
-            <div className="flex h-screen flex-col items-center justify-center space-y-2 text-2xl">
+            <div className="flex flex-col items-center justify-center space-y-2 pt-80 text-center text-lg sm:text-2xl">
                 <p>
                     This website was designed & developed by{" "}
                     <span>
@@ -26,7 +26,7 @@ function page() {
                     </span>
                 </p>
             </div>
-        </>
+        </div>
     )
 }
 

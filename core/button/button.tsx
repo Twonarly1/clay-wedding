@@ -36,7 +36,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(f
     { ...props },
     ref,
 ) {
-    const { children, iconLeft, variant = "default" } = props
+    const { children, variant = "default" } = props
 
     if (!("as" in props)) {
         props.as = "button"
@@ -68,7 +68,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(f
 
         return (
             <a {...anchorProps} ref={ref as ForwardedRef<HTMLAnchorElement>}>
-                <ButtonContent iconLeft={iconLeft}>{children}</ButtonContent>
+                <ButtonContent>{children}</ButtonContent>
             </a>
         )
     }
@@ -84,9 +84,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(f
             ref={ref as ForwardedRef<HTMLButtonElement>}
             type={type}
         >
-            <ButtonContent iconLeft={iconLeft} isLoading={isLoading}>
-                {children}
-            </ButtonContent>
+            <ButtonContent isLoading={isLoading}>{children}</ButtonContent>
         </button>
     )
 })

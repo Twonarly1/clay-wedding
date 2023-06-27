@@ -1,12 +1,5 @@
 import { PageTitle } from "../../core"
 
-type Hotel = {
-    name: string
-    href: string
-    distance: string
-    time: string
-}
-
 const hotels: Hotel[] = [
     {
         name: "AmeriVu Inn & Suites - Chisago City",
@@ -36,7 +29,7 @@ const hotels: Hotel[] = [
 
 function page() {
     return (
-        <div>
+        <div className="min-h-screen">
             <PageTitle title={"Accommodations"} />
             <div className="mx-auto grid w-full max-w-7xl gap-8 p-8 sm:grid-cols-2">
                 {hotels.map((hotel) => (

@@ -1,18 +1,11 @@
-import { PageTitle } from "../../core/components"
+import { PageTitle } from "../../core"
 import Image from "next/image"
-import Group from "./components/group"
-import Example from "./components/grid-list"
+import GridList from "./components/grid-list"
 
-type Person = {
-    name: string
-    role: string
-    imageUrl: string
-}
-
-const couple: Person[] = [
-    { name: "Dejah Hawkinson", role: "Bride", imageUrl: "/party/couple.jpeg" },
-    { name: "Marcus Clay", role: "Groom", imageUrl: "/party/alex.jpg" },
-]
+// const couple: Person[] = [
+//     { name: "Dejah Hawkinson", role: "Bride", imageUrl: "/party/couple.jpeg" },
+//     { name: "Marcus Clay", role: "Groom", imageUrl: "/party/alex.jpg" },
+// ]
 
 const dejahsParty: Person[] = [
     { name: "Beau Hawkinson", role: "role", imageUrl: "/party/beau.jpg" },
@@ -34,12 +27,9 @@ const marcusParty: Person[] = [
 ]
 function page() {
     return (
-        <>
+        <div className="min-h-screen">
             <PageTitle title={"Wedding Party"} />
             <div className="flex flex-col space-y-8 p-8">
-                {/* <div className="mx-auto flex w-full max-w-7xl items-center justify-center gap-8">
-                    <Example people={couple} />
-                </div> */}
                 <Image
                     height={400}
                     width={400}
@@ -47,21 +37,16 @@ function page() {
                     className="mx-auto h-80 w-auto rounded-lg object-cover"
                     src="/party/couple.jpeg"
                 />
-                <h2 className="text-center text-xl font-bold">Dejah's Party</h2>
-                <div className="relative z-20 flex w-full gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
-                    <Example people={dejahsParty} />
+                <h2 className="cursor-default text-center text-xl font-bold">Dejah's Party</h2>
+                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
+                    <GridList people={dejahsParty} />
                 </div>
-                <h2 className="text-center text-xl font-bold">Marcus's Party</h2>
-                <div className="relative z-20 flex w-full gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
-                    <Example people={marcusParty} />
+                <h2 className="cursor-default text-center text-xl font-bold">Marcus's Party</h2>
+                <div className="relative z-20 flex w-full cursor-default gap-8 overflow-y-hidden overflow-x-scroll pb-4 scrollbar scrollbar-track-gray-200 scrollbar-thumb-fern_green">
+                    <GridList people={marcusParty} />
                 </div>
             </div>
-            {/* <Group persons={couple} row={true} /> */}
-            {/* <div className="divide- mt-10 grid grid-cols-1 divide-x divide-fern_green sm:grid-cols-2">
-                    <Group persons={dejahsParty} row={false} title="Bride Party" />
-                    <Group persons={marcusParty} row={false} title="Groom Party" />
-                </div> */}
-        </>
+        </div>
     )
 }
 

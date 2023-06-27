@@ -2,11 +2,10 @@ import "./globals.css"
 
 import localFont from "@next/font/local"
 import clsx from "clsx"
-import Providers from "./providers"
-import { Footer } from "../core/components"
-import { SupabaseProvider } from "./supabase-provider"
 
 import type { Metadata } from "next"
+import { Footer } from "../core"
+import Providers from "./providers"
 
 const kaisei = localFont({
     src: "../public/fonts/kaisei-tokumin-latin-700-normal.woff2",
@@ -33,10 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en" className={(clsx(kaisei.variable), "bg-white")}>
             <body>
-                {/* <SupabaseProvider> */}
                 <Providers>{children}</Providers>
-                {/* </SupabaseProvider> */}
-                {/* <Footer /> */}
+                <Footer />
             </body>
         </html>
     )

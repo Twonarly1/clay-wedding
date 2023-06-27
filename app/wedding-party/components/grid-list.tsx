@@ -1,19 +1,10 @@
-import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid"
-import clsx from "clsx"
 import Image from "next/image"
-
-type Person = {
-    name: string
-    role: string
-    imageUrl: string
-}
 
 type Props = {
     people: Person[]
-    size?: number
 }
 
-export default function Example({ people, size }: Props) {
+export default function GridList({ people }: Props) {
     return (
         <>
             {people.map((person) => (

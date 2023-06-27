@@ -2,9 +2,6 @@
 
 import { Fragment, useEffect, useRef, useState } from "react"
 import { v4 as uuidv4 } from "uuid"
-import { DELETE_IMAGE, INSERT_IMAGE } from "../../../lib/graphql/mutations"
-import { FETCH_IMAGE_LIST } from "../../../lib/graphql/queries"
-import { Download, X } from "../../../core/icons"
 import saveAs from "file-saver"
 import { Dialog, Transition } from "@headlessui/react"
 import toast from "react-hot-toast"

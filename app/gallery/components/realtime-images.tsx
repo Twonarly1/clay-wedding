@@ -1,20 +1,14 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
-
 import Image from "next/image"
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import clsx from "clsx"
-import { Ring } from "@uiball/loaders"
-
-export async function delay(ms: number) {
-    await new Promise((resolve) => setTimeout(resolve, ms))
-}
+import { createClient } from "../../../lib/supabase/supabase-browser"
 
 export default function RealtimeImages({ serverImages }: { serverImages: Image[] }) {
     const [images, setImages] = useState(serverImages)
-    const supabase = createClientComponentClient<Database>()
+    const supabase = createClient()
     const [isLoading, setIsLoading] = useState<boolean>(true)
 
     useEffect(() => {
@@ -42,7 +36,7 @@ export default function RealtimeImages({ serverImages }: { serverImages: Image[]
     }
 
     return (
-        <div className="p-8">
+        <div className=" p-8">
             <ResponsiveMasonry
                 columnsCountBreakPoints={{
                     320: 1,

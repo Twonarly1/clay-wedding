@@ -1,23 +1,28 @@
-type SupabaseStorageImage = {
-    created_at: string
-    id: string
-    last_accessed_at: string
-    metadata: Object
+type Person = {
     name: string
-    updated_at: string
+    role: string
+    imageUrl: string
 }
 
-type SupabaseDatabaseImage = {
-    created_at: string | null
-    imageSrc: string | null
-    name: string | null
+type FAQ = {
+    question: string
+    answer: string
 }
 
-type Guest = {
-    id: number
-    created_at: string
-    wedding: string
-    party: string
-    meal: string
+type NavItem = {
+    title: string
+    href: string
+}
+
+type LinkProps = {
+    href: string
+    title: string
+    variant?: "dark" | "white"
+}
+
+type Hotel = {
     name: string
+    href: string
+    distance: string
+    time: string
 }

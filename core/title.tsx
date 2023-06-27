@@ -1,7 +1,5 @@
 import clsx from "clsx"
 import { Dancing_Script } from "next/font/google"
-import React from "react"
-import { Button } from "./button/button"
 import { CustomLink } from "./custom-link"
 
 const dancing = Dancing_Script({
@@ -20,7 +18,7 @@ export function PageTitle({ title }: { title: string }) {
             <h1
                 className={clsx(
                     `${flavor}`,
-                    "mt-14 text-center text-[50px] text-fern_green sm:mt-0 sm:text-[100px]",
+                    "mt-14 cursor-default text-center text-[50px] text-fern_green sm:mt-0 sm:text-[100px]",
                 )}
             >
                 {title}
