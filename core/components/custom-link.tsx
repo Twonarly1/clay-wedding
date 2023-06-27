@@ -15,6 +15,7 @@ export function CustomLink({ href, title, variant = "dark" }: LinkProps) {
             variant === "white",
     })
     return (
+        //@ts-ignore
         <Link href={href} className={clsx(className)}>
             {title}
         </Link>
