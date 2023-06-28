@@ -2,7 +2,15 @@
 import Image from "next/image"
 import React, { useState, useEffect, useRef } from "react"
 
-const colors = ["/party/couple.jpeg", "/party/couple.jpeg", "/party/couple.jpeg"]
+const colors = [
+    "/party/couple.jpeg",
+    "/party/couple-1.jpg",
+    // "/party/couple-2.jpg",
+    "/party/couple-3.jpg",
+    "/party/couple-4.jpg",
+    "/party/couple-5.jpg",
+    "/party/couple-6.jpg",
+]
 const delay = 3500
 
 export function Slideshow() {
@@ -35,12 +43,12 @@ export function Slideshow() {
             >
                 {colors.map((image, idx) => (
                     <Image
-                        className="slide h-auto w-auto"
+                        className="slide h-[300px] w-auto lg:h-[400px]"
                         key={idx}
                         src={image}
                         alt=""
                         height={400}
-                        width={400}
+                        width={600}
                     />
                 ))}
             </div>
@@ -58,5 +66,3 @@ export function Slideshow() {
         </div>
     )
 }
-
-//inline-block h-5 w-5 cursor-pointer rounded-full bg-white

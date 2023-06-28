@@ -5,7 +5,7 @@ function page() {
     return (
         <div>
             <PageTitle title={"FAQ"} />
-            <div className="mx-auto max-w-4xl p-8 py-24">
+            <div className="mx-auto max-w-4xl p-8 py-16">
                 <FAQ />
             </div>
         </div>

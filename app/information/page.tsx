@@ -75,6 +75,7 @@ export default function Page() {
     return (
         <div className="min-h-screen">
             <PageTitle title={"Information"} />
+
             <div className="mx-auto flex max-w-7xl flex-col-reverse justify-center gap-16 p-8 py-24">
                 <div className="w-full">
                     <iframe
@@ -85,7 +86,7 @@ export default function Page() {
                         loading="eager"
                     ></iframe>
                 </div>
-                <div className="cursor-default p-5 text-left lg:text-left">
+                <div className="cursor-default text-left lg:p-5 lg:text-left">
                     <dl className="space-y-10">
                         <div className="">
                             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
