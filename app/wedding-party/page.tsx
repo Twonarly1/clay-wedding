@@ -10,8 +10,8 @@ import { Slideshow } from "../../core/slideshow"
 
 const dejahsParty: Person[] = [
     { name: "Beau Hawkinson", role: "Best Bro", imageUrl: "/party/beau.jpg" },
-    { name: "Erika Dennis", role: "Bridesmaid", imageUrl: "/party/erika1.jpg" },
-    { name: "Alexandra Triemert", role: "Bridesmaid", imageUrl: "/party/alex.jpg" },
+    { name: "Erika Dennis", role: "Made of Honor", imageUrl: "/party/erika1.jpg" },
+    { name: "Alexandra Triemert", role: "Matron of Honor", imageUrl: "/party/alex.jpg" },
     { name: "Lauren Gernentz", role: "Bridesmaid", imageUrl: "/party/lauren.jpg" },
     { name: "Brianna Karnes", role: "Bridesmaid", imageUrl: "/party/bri-karnes.jpg" },
     { name: "Jessica Bahn", role: "Bridesmaid", imageUrl: "/party/jess-1.jpg" },
