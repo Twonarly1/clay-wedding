@@ -90,7 +90,7 @@ export default function Page() {
                     <dl className="space-y-10">
                         <div className="">
                             <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-                                Wedding Day Itinery
+                                Wedding Day Itinerary
                             </h2>
                             <p className="mt-4 text-base leading-7">
                                 All events will be located at{" "}

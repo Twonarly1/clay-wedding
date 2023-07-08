@@ -4,6 +4,7 @@ import { Dancing_Script } from "next/font/google"
 import Image from "next/image"
 import { Button } from "../core"
 import { Slideshow } from "../core/slideshow"
+import Countdown from "./countdown"
 
 const dancing = Dancing_Script({
     subsets: ["latin"],
@@ -66,10 +67,11 @@ function HomePage() {
                         <p>Ojiketa Regional Park</p>
                     </div>
                 </Button>
-                <div className=" flex cursor-default items-center gap-2 text-sm font-light sm:text-base">
+                {/* <div className=" flex cursor-default items-center gap-2 text-sm font-light sm:text-base">
                     <div className="h-2 w-2 animate-pulse rounded-full bg-fern_green" />
                     <p> {`${daysLeft} days, ${hoursLeft} hours, ${minutesLeft} minutes `}</p>
-                </div>
+                </div> */}
+                <Countdown />
                 <nav className="flex flex-col gap-3 py-10">
                     {navItems.map((i) => (
                         <Button as="a" key={i.href} href={i.href} variant="dark">

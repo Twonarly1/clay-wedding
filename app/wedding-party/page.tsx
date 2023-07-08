@@ -9,22 +9,22 @@ import { Slideshow } from "../../core/slideshow"
 // ]
 
 const dejahsParty: Person[] = [
-    { name: "Beau Hawkinson", role: "role", imageUrl: "/party/beau.jpg" },
-    { name: "Erika Dennis", role: "role", imageUrl: "/party/erika1.jpg" },
-    { name: "Alexandra Triemert", role: "role", imageUrl: "/party/alex.jpg" },
-    { name: "Lauren Gernentz", role: "role", imageUrl: "/party/lauren.jpg" },
-    { name: "Brianna Karnes", role: "role", imageUrl: "/party/bri-karnes.jpg" },
-    { name: "Jessica Bahn", role: "role", imageUrl: "/party/jess-1.jpg" },
-    { name: "Brianna Piersdorf", role: "role", imageUrl: "/party/bri.jpg" },
+    { name: "Beau Hawkinson", role: "Best Bro", imageUrl: "/party/beau.jpg" },
+    { name: "Erika Dennis", role: "Bridesmaid", imageUrl: "/party/erika1.jpg" },
+    { name: "Alexandra Triemert", role: "Bridesmaid", imageUrl: "/party/alex.jpg" },
+    { name: "Lauren Gernentz", role: "Bridesmaid", imageUrl: "/party/lauren.jpg" },
+    { name: "Brianna Karnes", role: "Bridesmaid", imageUrl: "/party/bri-karnes.jpg" },
+    { name: "Jessica Bahn", role: "Bridesmaid", imageUrl: "/party/jess-1.jpg" },
+    { name: "Brianna Piersdorf", role: "Bridesmaid", imageUrl: "/party/bri.jpg" },
 ]
 
 const marcusParty: Person[] = [
     { name: "Matthew Clay", role: "Best Man", imageUrl: "/party/mathew.jpg" },
     { name: "Mitchell Clay", role: "Best Man", imageUrl: "/party/mitchell.jpg" },
-    { name: "Ryan Karnes", role: "role", imageUrl: "/party/ryan-karnes-1.jpg" },
-    { name: "Dallas Genung", role: "role", imageUrl: "/party/dal-2.jpg" },
-    { name: "Dan Hanacek", role: "role", imageUrl: "/party/dan-2.jpg" },
-    { name: "Mike Chavez", role: "role", imageUrl: "/party/mike.jpg" },
+    { name: "Ryan Karnes", role: "Groomsmen", imageUrl: "/party/ryan-karnes-1.jpg" },
+    { name: "Dallas Genung", role: "Groomsmen", imageUrl: "/party/dal-2.jpg" },
+    { name: "Dan Hanacek", role: "Groomsmen", imageUrl: "/party/dan-2.jpg" },
+    { name: "Mike Chavez", role: "Groomsmen", imageUrl: "/party/mike.jpg" },
 ]
 function page() {
     return (
