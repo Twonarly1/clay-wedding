@@ -1,12 +1,6 @@
 import { PageTitle } from "../../core"
-import Image from "next/image"
 import GridList from "./components/grid-list"
 import { Slideshow } from "../../core/slideshow"
-
-// const couple: Person[] = [
-//     { name: "Dejah Hawkinson", role: "Bride", imageUrl: "/party/couple.jpeg" },
-//     { name: "Marcus Clay", role: "Groom", imageUrl: "/party/alex.jpg" },
-// ]
 
 const dejahsParty: Person[] = [
     { name: "Beau Hawkinson", role: "Best Bro", imageUrl: "/party/beau.jpg" },

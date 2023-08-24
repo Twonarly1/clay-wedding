@@ -7,7 +7,7 @@ type IntrinsicAnchorProps = ComponentProps<"a">
 type IntrinsicButtonProps = ComponentProps<"button">
 
 type CommonProps = {
-    variant?: "default" | "dark" | "white"
+    variant?: "default" | "dark" | "white" | "footer"
 } & ButtonContentProps
 
 type AnchorProps = {
@@ -49,6 +49,8 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, Props>(f
             variant === "dark",
         "rounded-full border border-fern_green bg-white p-3 px-8 text-fern_green hover:border-fern_green hover:bg-fern_green hover:text-white":
             variant === "white",
+        "w-full text-center font-light text-sm hover:font-bold sm:w-32 sm:text-left":
+            variant === "footer",
     })
 
     if (isAnchor(props)) {

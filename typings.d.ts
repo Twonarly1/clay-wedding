@@ -13,6 +13,7 @@ type FAQ = {
 type NavItem = {
     title: string
     href: string
+    svg?: any
 }
 
 type LinkProps = {

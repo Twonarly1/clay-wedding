@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "./button"
+import { Modal } from "./modal"
 
 const navItems: NavItem[] = [
     { title: "Information", href: "/information" },
@@ -7,10 +8,6 @@ const navItems: NavItem[] = [
     { title: "FAQ", href: "/faq" },
     { title: "Accommodations", href: "/accommodations" },
     { title: "Gallery", href: "/gallery" },
-    {
-        title: "Registry",
-        href: "https://www.amazon.com/wedding/dejah-hawkinson-marcus-clay-chisago-city-october-2023/registry/34CLJCXZYBXOZ",
-    },
 ]
 
 export function Footer() {
@@ -24,6 +21,7 @@ export function Footer() {
                         </p>
                     </Button>
                 ))}
+                <Modal variant="footer" />
             </div>
 
             <div className="flex w-full flex-col items-center justify-between text-center sm:w-fit sm:items-start sm:text-right">
